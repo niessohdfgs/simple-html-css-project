@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style2.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <title>Personal Site</title>
+<style>
+    ::-webkit-scrollbar {
+        width: 10px;
+    }
+
+    ::-webkit-scrollbar-thumb {
+        background: #888; 
+        border-radius: 10px;
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+        background: #555; 
+    }
+    
+
+    @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap');
+
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Poppins', sans-serif; 
+    } 
+
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        background: url('pxfuel copy.jpg') no-repeat center center fixed;
+        background-size: cover;
+        background-attachment: fixed; 
+        flex-direction: column;
+    }
+
+    .logo {
+        color: #fff;
+        position: relative;
+        top: 35px;
+        right: 215px;
+    }
+
+    .navbar a {
+        font-size: 18px;
+        color: #fff;
+        text-decoration: none;
+        font-weight: 400;
+        margin: 0 20px;
+        position: relative;
+        top: 8px;
+        right: -100px;
+        transition: .5s;
+    }
+
+    .social-media  {
+        width: 150px;
+        height: 40px;
+        justify-content: space-between;
+        display: flex;
+        position: relative;
+        top: -24px;
+        left: 940px;
+    }
+
+    .social-media a {
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        width: 40px;
+        height: 40px;
+        background: transparent;
+        border: 2px solid transparent;
+        text-decoration: none;
+        transition: .5s;
+    }
+
+    .social-media a:hover {
+        border-color: #ffffff;
+        border-radius: 60px;
+    }
+
+    .social-media a i {
+        font-size: 24px;
+        color: #fff;
+    }
+
+    .navbar .home {
+        color: #ffffff;
+        text-decoration: underline;
+    }
+
+    .navbar a:hover {
+        color: #ffffff;
+        text-decoration: underline;
+    }
+
+    .main-text h1 {
+        font-weight: 500;
+        position: absolute;
+        left: 5%;
+        top: 30%;
+        font-size: 55px;
+        transform: translateY(-50%);
+        display: inline-block;
+        letter-spacing: 2px;
+        color: #fff;
+    }
+
+    .main-text p {
+        font-weight: 400;
+        position: absolute;
+        top: 43%;
+        left: 5%;
+        display: inline-block;
+        line-height: 35px;
+        color: #fff;
+    }
+
+    .img-container {
+        position: absolute;
+        top: 50%;
+        left: 70%;
+        transform: translate(-50%, -50%);
+        width: 1100px; 
+        height: 700px; 
+    }
+
+    .img-container img {
+        width: 100%; 
+        height: auto;
+        border-radius: 10px;
+    }
+
+    .btn {
+        color: #fff; 
+        width: 350px;
+        height: 50px;
+        position: absolute;
+        top: 80%;
+        left: 5%;
+        border-radius: 60px;
+        background-color: #000000;
+        border: 2px solid #000000;
+    }
+
+    .btn2 {
+        color: black; 
+        width: 170px;
+        font-weight: 600;
+        height: 50px;
+        position: absolute;
+        top: 80%;
+        left: 30%;
+        border-radius: 60px;
+        border: 2px solid #fff;
+        background-color: #fff;
+    }
+
+    .long-text {
+        position: absolute;
+        top: 52%;
+        left: 5%;
+        color: #fff;
+        font-weight: 400;
+        max-width: 400px;
+        font-size: 20px;
+        line-height: 30px;
+    }
+
+    .text2 {
+        color: #fff;
+        max-width: 400px;
+        line-height: 60px;
+        font-size: 17px;
+        position: absolute;
+        top: 800px;
+        left: 65%;
+       
+        font-weight: 500;
+        text-align: center;
+    }
+
+    .text3 {
+        color: #fff;
+        max-width: 400px;
+        line-height: 40px;
+        position: absolute;
+        top: 970px;
+        left: 65%;
+        font-size: 17px;
+        font-weight: 500;
+        text-align: center;
+        height: 300px;
+    }
+
+    .image2 {
+        width: 300px;
+        height: 200px;
+        position: relative;
+        top: 760px;
+        left: -150px;
+        border-radius: 20px;
+        border: 2px solid #fff;
+        transform: rotate(5deg);
+    }
+
+    .image3 {
+        width: 300px;
+        height: 200px;
+        position: relative;
+        top: 940px;
+        left: -290px;
+        border-radius: 20px;
+        border: 2px solid #fff;
+        transform: rotate(-15deg);
+    }
+
+    .image4 {
+        width: 250px;
+        height: 200px;
+        position: relative;
+        top: 930px;
+        left: -800px;
+        border-radius: 20px;
+        border: 2px solid #fff;
+        transform: rotate(25deg);
+    }
+
+    
+
+    .white-section {
+        background-color: #2b0f2a;
+        width: 100%;
+        height: 350px;
+        position: relative;
+        top: 1200px;
+        
+    }
+    .white-section2 {
+        background-color: transparent;
+        width: 50%;
+        height: 170px;
+        position: relative;
+        top: 890px;
+        border-radius: 30px;
+        border: 2px solid #fff;
+        
+        backdrop-filter: blur(10px);
+        box-shadow: 0 0 20px #000000;
+    }
+    .white-section2 p {
+        font-size: 30px;
+        font-weight: 500;
+        color: #fff;
+        position: absolute;
+        left: 33%;
+        top: 7%;
+        
+
+    }
+    .input-box input {
+    width: 300px;
+    height: 10px;
+    background: #fff;
+    border: none;
+    outline: none;
+    border: 1px solid rgba(255, 255, 255, 2);
+    border-radius: 40px;
+    font-size: 16px;
+    color: #000000;
+    padding: 20px 45px 20px 20px;
+    position: relative;
+    top: 50px;
+    left: 70px;
+
+}
+.input-box input::placeholder {
+    color: #000000;
+    position: relative;
+    left: 30px;
+}
+.input-box i {
+   position: absolute;
+    left: 90px;
+    top: 70px;
+    transform: translateY(-50%);
+    font-size: 20px;
+ 
+}
+.connection p{
+ color: #ffffff;
+ position: absolute;
+ top: 1700px;
+ left: 70px;
+ font-weight: 400;
+font-size: 25px;
+}
+.phone {
+    color: #ffffff;
+ position: absolute;
+ top: 1770px;
+ left: 70px;
+ font-weight: 200;
+font-size: 20px;
+}
+.email {
+    color: #ffffff;
+ position: absolute;
+ top: 1830px;
+ left: 70px;
+ font-weight: 200;
+font-size: 20px;
+}
+.trip {
+    color: #ffffff; 
+        width: 350px;
+        height: 50px;
+        position: relative;
+        top: 1250px;
+        left: 690px;
+        border-radius: 60px;
+        background-color: #000000;
+        border: 2px solid #000000;
+}
+.text-footer {
+    position: relative;
+left: 0px;
+
+top:870px;
+color: #fff;
+line-height: 50px;
+font-size: 16px;
+font-weight: 200;
+
+}
+.text-footer2 {
+    position: relative;
+left: 280px;
+
+top:570px;
+color: #fff;
+line-height: 50px;
+font-size: 16px;
+font-weight: 200;
+
+}
+.text-footer3 {
+    position: relative;
+left: 580px;
+
+top:270px;
+color: #fff;
+line-height: 50px;
+font-size: 16px;
+font-weight: 200;
+
+}
+</style>
+</head>
+<body>
+    
+<header>
+    <h1 class="logo">. Nature .</h1>
+   <nav class="navbar">
+    <a href="#" class="home">| Home |</a>
+    <a href="#">| About Us |</a>
+    <a href="#">| Review |</a>
+    <a href="#">| Featured |</a>
+    <a href="#">| Content |</a>
+   </nav>
+   <div class="social-media">
+    <a href="#"><i class='bx bxl-gmail'></i></a>
+    <a href="#"><i class='bx bxs-leaf'></i></a>
+    <a href="#"><i class='bx bxs-user'></i></a>
+   </div>
+   <div class="main-text">
+    <h1>Choose Your Card <br>With Few Click</h1>
+    <p>__________________</p>
+   </div>
+   
+   <button type="submit" class="btn">SUBMIT NOW</button>
+   <button type="submit" class="btn2">Create Account</button>
+   <button type="submit" class="trip">&&Start Your Trip Now&&</button>
+   <div class="long-text">
+       <p>Personality Test. The personality test below was done in… | by Wilbert | Wilbert's Presentation | Medium Simple Open <br>
+       Source icons carefully crafted<br> for designers & developers</p>
+   </div>
+
+   <div class="text2">
+    <h1> <em>pure air to breathe to SOME butterfly !!!!</em></h1>
+   </div>
+
+   <div class="text5">
+    <p></p>
+   </div>
+
+   <div class="text3">
+     <p>Nature is indeed God's precious gift to Earth. It is the primary source of all the necessities for the nourishment of all living beings on Earth. Right from the
+    Aban 27, 1402 AP — The natural world is a source of immense beauty and joy, providing us with a healthy environment in which to live. It offers diverse flowers
+    Answer: Mother Nature is the only provider of  natural fuels, fibers, and medicinal plants.
+    </p>
+   </div>
+
+   <img class="image2" src="firewatch-digital-2d-digital-art-photoshop-landscape-sunlight-nature-birds-trees-hills-mountains-wallpaper-preview copy.jpg" alt="">
+   <img class="image3" src="firewatch-digital-2d-digital-art-photoshop-landscape-sunlight-nature-birds-trees-hills-mountains-wallpaper-preview copy.jpg" alt="">
+   <img class="image4" src="firewatch-digital-2d-digital-art-photoshop-landscape-sunlight-nature-birds-trees-hills-mountains-wallpaper-preview copy.jpg" alt="">
+</header>
+<div class="white-section">
+    
+
+    <div class="input-box"> 
+        <input type="text" placeholder="Search..." required>
+        <i class='bx bx-search-alt'></i>
+        </div>
+
+</div>
+<div class="connection"><p>OUR CONNECTION 
+</p>
+</div>
+<div class="phone"><p> Phone : 03152325251-0244235224
+</p>
+</div>
+</div>
+<div class="email"><p> Email : mastercake@gmail.com
+</p>
+</div>
+<section>
+<div class="text-footer">
+    <p>[ consisting ]<br>alphabeti<br>cnumeric<br>characters<br>compatib<br>leInternet</p>
+</div>
+<div class="text-footer2">
+    <p>[environments]<br> directly<br> specific<br> address<br>  usually<br>  organization</p>
+</div>
+<div class="text-footer3">
+    <p>[networks]<br>  constitutes<br> manual<br>  prescribes<br>  implementation<br>  degr</p>
+</div>
+</section>
+ </div>
+
+</body>
+</html>
